@@ -7,8 +7,8 @@ Launching the app from it's root file "/" will begin the authentication for the 
 
 After using the "Authenticate" button for the nation of your choosing, you can interact with any of the following menu options:
 
-Markup: -People Count
-        -People List
-        -People Create
-        -People Update
-        -People Delete
+- People Count
+- People List
+- People Create
+- People Update
+- People Delete
