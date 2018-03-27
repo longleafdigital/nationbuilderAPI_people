@@ -1,4 +1,4 @@
-# Nationbuilder API People App (nationbuilderAPI_people)
+= Nationbuilder API People App (nationbuilderAPI_people) =
 Using the NB API to edit people entities for Developer certification: https://nationbuilder.com/developer_exercises
 
 This app is built with Python on Flask. It should serve the purpose of creating, editing, and deleting people from a Nation's database via the API as specificed in the exercises document.
@@ -12,3 +12,14 @@ After using the "Authenticate" button for the nation of your choosing, you can i
 - People Create
 - People Update
 - People Delete
+
+== Functions Roadmap ==
+The following is my walkthrough roadmap of the app functions:
+
+- "/" (index)
+  - "/authenticate"
+   - "/people/count"
+   - "/people/list"
+   - "/people/create"
+   - "/people/update"
+   - "/people/delete"
