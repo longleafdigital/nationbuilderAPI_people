@@ -26,7 +26,7 @@ def slugchange():
 	#store OAuth 2.0 values for Blake's Test People App as session information
 	client_id = r'002ab1e9470339222ee3a65220dfbe0ee77c82d8122805c0502227b5c72c9a10'
 	client_secret = r'a6bb5365453640bbdf64be0912d0f8726da622739bfea05d91cc2a526c896883'
-	redirect_uri = 'http://localhost:5000/authenticate'
+	redirect_uri = 'https://0523d76e.ngrok.io/authenticate'
 	session = OAuth2Session(client_id, client_secret, redirect_uri=redirect_uri)
 	
 	nation_slug = request.form['form_nation_slug']
@@ -53,7 +53,7 @@ def index():
 	#store OAuth 2.0 values for Blake's Test People App as session information
 	client_id = r'002ab1e9470339222ee3a65220dfbe0ee77c82d8122805c0502227b5c72c9a10'
 	client_secret = r'a6bb5365453640bbdf64be0912d0f8726da622739bfea05d91cc2a526c896883'
-	redirect_uri = 'http://localhost:5000/authenticate'
+	redirect_uri = 'https://0523d76e.ngrok.io/authenticate'
 	session = OAuth2Session(client_id, client_secret, redirect_uri=redirect_uri)
 
 	authorize_url = 'https://' + nation_slug + '.nationbuilder.com/oauth/authorize'
