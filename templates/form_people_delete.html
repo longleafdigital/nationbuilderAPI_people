@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+<h2>Update a person:</h2>
+<form action="/people/delete" method="post">
+	<select class="form-control" name="person_id">
+		{% for person in data %}
+		<option value="{{ person.id }}">{{ person.first_name }} {{ person.last_name }}</option>
+		{% endfor %}
+	</select>
+	<small id="person_id_help" class="form-text text-muted">Use this field to slect the person entity you want to alter.</small>
+  <hr>
+	<div class="alert alert-danger" role="alert">
+		<strong>Warning!</strong> This will remove slected person entity from the Nationbuilder database
+	</div>
+  <input type="submit">
+</form>
+{% endblock %}

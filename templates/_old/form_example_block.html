@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+
+<form action="/people/create" method="post">
+	<label>Nationbuilder ID</label>
+	<input type="text" name="person_id">
+	<p>Only use this if you're updating the person record.</p>
+	<br>
+	<label>First Name</label>
+    <input type="text" name="person_first_name">
+	<label>Last Name</label>
+	<input type="text" name="person_last_name">
+	<label>Email</label>
+	<input type="text" name="person_email">
+    <input type="submit">
+</form>
+{{ first_name_list }}
+{% endblock %}

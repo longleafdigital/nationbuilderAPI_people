@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+<h2>Change Nation Slug:</h2>
+<form action="/slug" method="post">
+  <div class="form-group">
+    <label for="form_nation_slug">New Nation Slug:</label>
+    <input type="text" class="form-control" id="form_nation_slug" placeholder="Enter new slug" name="form_nation_slug">
+  </div>
+  <input type="submit">
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+<h2>Update a person:</h2>
+<form action="/people/update" method="post">
+	<select class="form-control" name="person_id">
+		{% for person in data %}
+		<option value="{{ person.id }}">{{ person.first_name }} {{ person.last_name }}</option>
+		{% endfor %}
+	</select>
+	<small id="person_id_help" class="form-text text-muted">Use this field to slect the person entity you want to alter.</small>
+  <hr>
+  <div class="form-group">
+    <label for="person_first_name">First Name</label>
+    <input type="text" class="form-control" id="person_first_name" aria-describedby="emailHelp" placeholder="Enter first name" name="person_first_name">
+  </div>
+  <div class="form-group">
+    <label for="person_last_name">Last Name</label>
+    <input type="text" class="form-control" id="person_last_name" placeholder="Enter last name" name="person_last_name">
+  </div>
+  <div class="form-group">
+    <label for="person_email">Email Address</label>
+    <input type="text" class="form-control" id="person_email" placeholder="Enter email address" name="person_email">
+  </div>
+  <input type="submit">
+</form>
+{% endblock %}

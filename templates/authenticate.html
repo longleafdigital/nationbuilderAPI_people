@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- JQuery 3.x -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<!-- fixes to css issues -->
+<style>
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+body {
+	font-size: 2rem;
+}
+</style>
+
+<title>Testing</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in navigation %}
+        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+    </ul>
+
+	<div class="container main">
+		<h1 style="text-decoration:underline;">Nationbuilder People Test App</h1>
+		<div id="content" class="row">
+			<hr>
+			<p>Success!</p>
+			<p>Response Code from URL (returned from NB): {{ code }}</p>
+			<p>Response Token (returned from NB): {{ access_token }}</p>
+			<p>Current NB Slug: {{ nation_slug }}</p>
+			<hr>
+			<p>What's next?</p>
+		</div>
+		<div id="nav" class="row">
+			<ul>
+				<li><a href="{{ uri }}">Authenticate</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/people/count">People Count</a></li>
+				<li><a href="/people/list">People List</a></li>
+				<li><a href="/people/create/form">People Create</a></li>
+				<li><a href="/people/update/form">People Update</a></li>
+				<li><a href="/people/delete/form">People: Delete</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

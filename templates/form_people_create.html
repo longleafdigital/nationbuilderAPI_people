@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block content %}
+<h2>Create a person:</h2>
+<form action="/people/create" method="post">
+  <div class="form-group">
+    <label for="person_first_name">First Name</label>
+    <input type="text" class="form-control" id="person_first_name" aria-describedby="emailHelp" placeholder="Enter first name" name="person_first_name">
+  </div>
+  <div class="form-group">
+    <label for="person_last_name">Last Name</label>
+    <input type="text" class="form-control" id="person_last_name" placeholder="Enter last name" name="person_last_name">
+  </div>
+  <div class="form-group">
+    <label for="person_email">Email Address</label>
+    <input type="text" class="form-control" id="person_email" placeholder="Enter email address" name="person_email">
+  </div>
+  <input type="submit">
+</form>
+{% endblock %}

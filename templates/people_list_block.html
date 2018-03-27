@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+<p>Success!</p>
+<hr>
+<table>
+	<tr>
+		<th>Firstname</th>
+		<th>Lastname</th> 
+		<th>Email</th>
+		<th>Nationbuilder ID</th>
+		<th>Zip Code</th>
+	</tr>
+	{% for person in data %}
+		<tr>
+			<td>{{ person.first_name }}</td>
+			<td>{{ person.last_name }}</td>
+			<td>{{ person.email }}</td>
+			<td>{{ person.id }}</td>
+			<td>{{ person.primary_address.zip }}</td>
+		</tr>
+	{% endfor %}
+</table>
+{{ results }}
+{% endblock %}
